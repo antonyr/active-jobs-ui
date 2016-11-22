@@ -1,0 +1,13 @@
+<h3> Active Job List </h3>
+<table>
+  <tr>
+    <th>job id</th>
+    <th>status</th>
+  </tr>
+<% @store.entries.each do |job_id| %>
+  <tr>
+    <th> <%= job_id %> </th>
+    <th> <%= @store.status(job_id) %> </th>
+  </tr>
+<% end %>
+</table>

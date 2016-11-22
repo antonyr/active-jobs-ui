@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ActiveJobsUi::JobTracker do
-  let(:store) { PStore.new('job_data') }
+  let(:store) { PStore.new(ActiveJobsUi::Store::FILE_NAME) }
   let(:job_info) { store.transaction { store.roots.sort } }
   let(:job_id) { 'j0b-1d' }
   let(:job) { 'AddPersonToMailChimpJob' }
